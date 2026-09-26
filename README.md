@@ -1,24 +1,23 @@
-# Pixel Perfect Pixel
+# My Portfolio Website
 
-Implement exactly the screenshot and nothing else
+A modern, responsive personal portfolio website showcasing my journey as a Computer Science engineering student. The website highlights my technical skills, projects, certifications, achievements, and experience through a clean and interactive interface.
 
-This project was built with [Lovable](https://lovable.dev).
+Designed to present my work and learning journey in a professional yet personal way, with a focus on simplicity, visual appeal, and a smooth user experience.
 
-## Build with Lovable
+## Tech Stack
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/e8ac8a2f-80e8-4b8e-a7b2-55cfaf1afff1).
+* HTML
+* CSS
+* JavaScript
+* React
+* Tailwind CSS
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Features
 
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+* Responsive design
+* About Me section
+* Skills and technologies
+* Projects showcase
+* Certifications and achievements
+* Experience and education
+* Contact section
