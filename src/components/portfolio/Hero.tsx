@@ -10,7 +10,7 @@ function useTypewriter(words: string[]) {
   const [del, setDel] = useState(false);
 
   useEffect(() => {
-    const word = words[i % words.length];
+    const word = words[i % words.length] ?? "";
     const done = !del && text === word;
     const empty = del && text === "";
     const delay = done ? 1600 : empty ? 250 : del ? 40 : 75;
