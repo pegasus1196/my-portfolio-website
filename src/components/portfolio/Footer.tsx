@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Heart } from "lucide-react";
 import { profile } from "./data";
 
 export function Footer() {
@@ -14,9 +13,8 @@ export function Footer() {
         viewport={{ once: true }}
         className="mx-auto max-w-5xl text-center"
       >
-        <p className="flex items-center justify-center gap-1.5 text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} {profile.name} — designed & built with
-          <Heart className="size-3.5 fill-primary text-primary" />
+        <p className="text-sm text-muted-foreground">
+          &copy; {new Date().getFullYear()} {profile.name}
         </p>
       </motion.div>
     </footer>
