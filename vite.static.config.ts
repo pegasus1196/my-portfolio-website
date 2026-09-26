@@ -8,6 +8,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
+  base: "/my-portfolio-website/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
