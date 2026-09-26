@@ -8,6 +8,11 @@ import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { Cursor } from "@/components/portfolio/Cursor";
 import { Intro } from "@/components/portfolio/Intro";
+import { AnimatedBackground } from "@/components/portfolio/AnimatedBackground";
+import { Marquee, WaveDivider } from "@/components/portfolio/Decor";
+import { skills } from "@/components/portfolio/data";
+
+const marqueeItems = ["full-stack", "secure", "scalable", ...skills.flatMap((g) => g.items).slice(0, 14)];
 
 const title = "Anjali Tripathi — Full-Stack Developer";
 const description =
@@ -29,14 +34,19 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="relative overflow-x-hidden scroll-smooth">
+    <main className="relative isolate overflow-x-hidden scroll-smooth">
       <Intro />
       <Cursor />
       <Navbar />
+      <AnimatedBackground />
       <Hero />
+      <Marquee items={marqueeItems} />
       <About />
+      <WaveDivider />
       <Projects />
+      <WaveDivider />
       <Skills />
+      <WaveDivider />
       <Contact />
       <Footer />
     </main>
