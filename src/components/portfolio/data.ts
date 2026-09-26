@@ -15,13 +15,13 @@ export const education = [
   {
     school: "MIT WPU, Pune",
     degree: "B.Tech in Computer Science and Engineering",
-    period: "Sept 2026 – Present",
+    period: "Aug 2024 – Present",
     detail: "CGPA 8.99",
   },
   {
     school: "Delhi Public School, Nashik",
     degree: "Class 12, Intermediate",
-    period: "July 2024",
+    period: "July 2023",
     detail: "86.7%",
   },
 ];
@@ -81,22 +81,73 @@ export const projects = [
 export const skills = [
   {
     group: "Full-Stack Development",
-    items: ["Node.js", "React", "JavaScript (ES6+)", "RESTful APIs", "HTML", "CSS"],
+    items: [
+      { name: "Node.js", info: "Server-side JavaScript runtime for building scalable backend services" },
+      { name: "React", info: "Component-based UI library for building interactive user interfaces" },
+      { name: "JavaScript (ES6+)", info: "Modern JavaScript with arrow functions, async/await, destructuring & more" },
+      { name: "RESTful APIs", info: "Designing and consuming HTTP-based APIs following REST architecture" },
+      { name: "HTML", info: "Semantic markup for structuring accessible web content" },
+      { name: "CSS", info: "Styling and layout with Flexbox, Grid, animations & responsive design" },
+    ],
   },
   {
     group: "Cloud & DevOps",
-    items: ["AWS EC2", "S3", "RDS", "IAM", "Lambda", "ECR", "Docker", "Kubernetes", "AWS CLI", "Jenkins"],
+    items: [
+      { name: "AWS EC2", info: "Elastic Compute Cloud — scalable virtual servers in the cloud" },
+      { name: "S3", info: "Simple Storage Service for scalable object storage" },
+      { name: "RDS", info: "Managed relational database service on AWS" },
+      { name: "IAM", info: "Identity & Access Management for secure AWS resource control" },
+      { name: "Lambda", info: "Serverless compute — run code without provisioning servers" },
+      { name: "ECR", info: "Elastic Container Registry for storing Docker images" },
+      { name: "Docker", info: "Containerization platform for consistent dev-to-prod environments" },
+      { name: "Kubernetes", info: "Container orchestration for automating deployment & scaling" },
+      { name: "AWS CLI", info: "Command-line interface for managing AWS services" },
+      { name: "Jenkins", info: "Open-source CI/CD automation server for build pipelines" },
+    ],
   },
-  { group: "Languages", items: ["Python", "C++", "C", "JavaScript (ES6+)"] },
-  { group: "Databases", items: ["MongoDB", "MySQL", "Data Modeling", "Mongoose"] },
+  {
+    group: "Languages",
+    items: [
+      { name: "Python", info: "Versatile language for scripting, ML, web backends & automation" },
+      { name: "C++", info: "High-performance systems programming with low-level memory control" },
+      { name: "C", info: "Foundational systems language for OS-level and embedded programming" },
+      { name: "JavaScript (ES6+)", info: "Full-stack language powering both browser and server applications" },
+    ],
+  },
+  {
+    group: "Databases",
+    items: [
+      { name: "MongoDB", info: "NoSQL document database for flexible, schema-less data storage" },
+      { name: "MySQL", info: "Reliable open-source relational database with SQL querying" },
+      { name: "Data Modeling", info: "Designing normalized schemas and entity relationships" },
+      { name: "Mongoose", info: "Elegant ODM for MongoDB with schema validation & middleware" },
+    ],
+  },
   {
     group: "Testing",
-    items: ["Unit Testing", "White Box Testing", "Black Box Testing", "CPM"],
+    items: [
+      { name: "Unit Testing", info: "Testing individual functions and components in isolation" },
+      { name: "White Box Testing", info: "Testing internal code paths, branches and logic flow" },
+      { name: "Black Box Testing", info: "Testing functionality without knowledge of internal implementation" },
+      { name: "CPM", info: "Critical Path Method for project scheduling and test planning" },
+    ],
   },
-  { group: "Machine Learning", items: ["TensorFlow", "OpenCV"] },
+  {
+    group: "Machine Learning",
+    items: [
+      { name: "TensorFlow", info: "Google's framework for building and training neural networks" },
+      { name: "OpenCV", info: "Computer vision library for image processing and object detection" },
+    ],
+  },
   {
     group: "Tools",
-    items: ["VS Code", "Cursor", "Docker Desktop", "GitHub", "Windows / Linux / macOS"],
+    items: [
+      { name: "VS Code", info: "Lightweight, extensible code editor with rich extension ecosystem" },
+      { name: "Cursor", info: "AI-powered code editor built on VS Code for faster development" },
+      { name: "Docker Desktop", info: "GUI for managing Docker containers, images and volumes" },
+      { name: "GitHub", info: "Version control platform for collaborative code hosting and CI/CD" },
+      { name: "Windows / Linux / macOS", info: "Cross-platform development across all major operating systems" },
+    ],
   },
 ];
 

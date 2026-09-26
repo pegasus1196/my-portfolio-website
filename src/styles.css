@@ -41,7 +41,8 @@
   --color-blush: var(--blush);
   --color-lavender: var(--lavender);
   --color-cream: var(--cream);
-  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --color-gold: oklch(0.82 0.12 80);
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -53,6 +54,7 @@
   --blush: oklch(0.905 0.048 12);
   --rose: oklch(0.68 0.17 8);
   --lavender: oklch(0.82 0.075 305);
+  --gold: oklch(0.82 0.12 80);
 
   --background: oklch(0.987 0.006 40);
   --foreground: oklch(0.28 0.035 350);
@@ -106,7 +108,7 @@
   }
 }
 
-/* Frosted glass card */
+/* ─── Frosted glass card ─── */
 @utility glass {
   background: color-mix(in oklab, var(--card) 62%, transparent);
   backdrop-filter: blur(16px);
@@ -114,7 +116,7 @@
   box-shadow: var(--shadow-soft);
 }
 
-/* Animated gradient text for headings */
+/* ─── Animated gradient text for headings ─── */
 @utility gradient-text {
   background-image: var(--gradient-hero);
   background-size: 220% 220%;
@@ -124,6 +126,7 @@
   animation: gradient-pan 9s ease infinite;
 }
 
+/* ─── Floating blob ─── */
 @utility blob {
   position: absolute;
   border-radius: 9999px;
@@ -132,6 +135,83 @@
   pointer-events: none;
 }
 
+/* ─── Section tints: each section gets a unique subtle background ─── */
+.section-tint-a {
+  background: linear-gradient(
+    180deg,
+    oklch(0.97 0.02 350 / 0.4) 0%,
+    oklch(0.99 0.008 40 / 0.2) 100%
+  );
+}
+
+.section-tint-b {
+  background: linear-gradient(
+    160deg,
+    oklch(0.96 0.03 300 / 0.3) 0%,
+    oklch(0.99 0.01 60 / 0.15) 100%
+  );
+}
+
+.section-tint-c {
+  background: linear-gradient(
+    200deg,
+    oklch(0.97 0.015 80 / 0.35) 0%,
+    oklch(0.98 0.02 350 / 0.2) 100%
+  );
+}
+
+.section-tint-d {
+  background: linear-gradient(
+    140deg,
+    oklch(0.96 0.04 8 / 0.25) 0%,
+    oklch(0.97 0.03 305 / 0.3) 100%
+  );
+}
+
+/* ─── Aurora mesh background ─── */
+.aurora {
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 40%, oklch(0.9 0.06 350 / 0.4), transparent),
+    radial-gradient(ellipse 60% 60% at 80% 20%, oklch(0.88 0.05 305 / 0.35), transparent),
+    radial-gradient(ellipse 70% 70% at 50% 80%, oklch(0.92 0.04 80 / 0.2), transparent);
+  animation: aurora-drift 20s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-drift {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(2%, -3%) scale(1.05);
+  }
+  100% {
+    transform: translate(-2%, 2%) scale(0.97);
+  }
+}
+
+/* ─── Film grain overlay ─── */
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* ─── Marquee infinite scroll ─── */
+.marquee {
+  animation: marquee-scroll 40s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ─── Gradient pan for text ─── */
 @keyframes gradient-pan {
   0%,
   100% {
@@ -142,6 +222,7 @@
   }
 }
 
+/* ─── Custom cursor ─── */
 @media (pointer: fine) {
   body {
     cursor: none;

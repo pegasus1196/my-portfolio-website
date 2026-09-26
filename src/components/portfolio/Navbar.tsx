@@ -46,12 +46,12 @@ export function Navbar() {
             <span className="text-primary">.</span>
           </button>
 
-          <ul className="hidden items-center gap-1 md:flex">
+          <ul className="hidden items-center gap-2 md:flex">
             {sections.map((s) => (
               <li key={s.id}>
                 <button
                   onClick={() => go(s.id)}
-                  className="relative rounded-full px-4 py-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+                  className="relative rounded-full px-5 py-2.5 text-sm text-muted-foreground transition-colors hover:text-primary"
                 >
                   {active === s.id && (
                     <motion.span

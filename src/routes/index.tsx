@@ -12,7 +12,7 @@ import { AnimatedBackground } from "@/components/portfolio/AnimatedBackground";
 import { Marquee, WaveDivider } from "@/components/portfolio/Decor";
 import { skills } from "@/components/portfolio/data";
 
-const marqueeItems = ["full-stack", "secure", "scalable", ...skills.flatMap((g) => g.items).slice(0, 14)];
+const marqueeItems = ["full-stack", "secure", "scalable", ...skills.flatMap((g) => g.items.map((i) => i.name)).slice(0, 14)];
 
 const title = "Anjali Tripathi — Full-Stack Developer";
 const description =
